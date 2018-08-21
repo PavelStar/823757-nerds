@@ -23,7 +23,61 @@
   <main>
     <section class="filters">
       <h2 class="visually-hidden">Фильтр товаров</h2>
-      <!-- Здесь будет форма -->
+      <form class="filter" action="index.html" method="get">
+        <fieldset>
+          <legend>Стоимость</legend>
+          <div class="price-range">
+            <input type="range" name="pricecount" min="1" max="15000" step="1">
+            <label for="price-from">от</label>
+            <input type="text" name="price" id="price-from" placeholder="0">
+            <label for="price-to">до</label>
+            <input type="text" name="price" id="price-to" placeholder="15000">
+          </div>
+        </fieldset>
+        <fieldset>
+          <legend>Сетка:</legend>
+          <ul>
+            <li class="filter-option">
+              <input type="radio" name="grid" value="adaptive" id="adaptive-grid" checked>
+              <label for="adaptive-grid">Адаптивная</label>
+            </li>
+            <li class="filter-option">
+              <input type="radio" name="grid" value="fixed" id="fixed-grid">
+              <label for="fixed-grid">Фиксированная</label>
+            </li>
+            <li class="filter-option">
+              <input type="radio" name="grid" value="responsive" id="responsive-grid">
+              <label for="responsive-grid">Резиновая</label>
+            </li>
+          </ul>
+        </fieldset>
+        <fieldset>
+          <legend>Особенности</legend>
+          <ul>
+            <li class="filter-option">
+              <input type="checkbox" name="slider" id="filter-slider">
+              <label for="filter-slider">Слайдер</label>
+            </li>
+            <li class="filter-option">
+              <input type="checkbox" name="slider" id="filter-advantage">
+              <label for="filter-advantage">Блок преимуществ</label>
+            </li>
+            <li class="filter-option">
+              <input type="checkbox" name="slider" id="filter-news">
+              <label for="filter-news">Новости</label>
+            </li>
+            <li class="filter-option">
+              <input type="checkbox" name="slider" id="filter-gallery">
+              <label for="filter-gallery">Галерея</label>
+            </li>
+            <li class="filter-option">
+              <input type="checkbox" name="slider" id="filter-cart">
+              <label for="filter-cart">Корзина</label>
+            </li>
+          </ul>
+        </fieldset>
+        <button class="button button-filter" type="submit">Показать</button>
+      </form>
     </section>
     <section class="catalog">
       <div class="sorting">
@@ -144,5 +198,26 @@
       <p>Скидка 10% для друзей из социальных сетей.</p>
     </div>
   </footer>
+
+  <section class="write-us">
+    <form class="write-us-form" action="https://echo.htmlacademy.ru" method="post">
+      <h2>Напишите нам</h2>
+      <p>
+        <label for="user-name">Ваше имя:</label>
+        <input id="user-name" type="text" name="name" placeholder="Имя Фамилия">
+      </p>
+      <p>
+        <label for="user-e-mail">Ваш e-mail:</label>
+        <input id="user-e-mail" type="text" name="e-mail" placeholder="email@example.com">
+      </p>
+      <p>
+        <label for="user-comment">Текст письма:</label>
+        <textarea id="user-comment" name="comment" rows="8" cols="80" placeholder="В свободной форме"></textarea>
+      </p>
+      <button class="button button-form" type="submit">Отправить</button>
+      <button class="button-close" type="button">Закрыть</button>
+    </form>
+  </section>
+
 </body>
 </html>
